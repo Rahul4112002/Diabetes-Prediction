@@ -1,3 +1,7 @@
+
+
+https://github.com/Rahul4112002/Diabetes-Prediction/assets/124488758/ab495c11-2cb7-441c-9340-278344c87a41
+
 # Mini Project on Machine Learning: Predicting Diabetes using Logistic Regression
 
 This repository contains the code and resources for a mini project aimed at predicting whether a patient is diabetic or non-diabetic. The project utilizes Logistic Regression and is implemented as a web application using Python Flask, HTML, CSS, and other technologies.
