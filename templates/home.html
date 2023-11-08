@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        margin-top: 0px;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #e5e4e4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .login {
+        background-color: #b3ebff; /* Theme color */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 500px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 5px 5px 5px rgb(47, 46, 46);
+      }
+
+      h1 {
+        font-family: "Trebuchet MS", sans-serif;
+        color: #333;
+        font-size: 40px;
+      }
+
+      form {
+        text-align: center;
+        margin-top: 10px;
+        height: max-content;
+      }
+
+      label {
+        display: block;
+        font-family: cursive;
+        margin-bottom: 5px;
+        margin-top: 3px;
+      }
+
+      input[type="text"] {
+        width: 50%;
+        padding: 5px;
+        margin: 0 auto; /* Center the input fields */
+        border: 3px solid #0b0050;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: background-color 0.3s; /* Hover effect */
+        display: flex;
+      }
+
+      button {
+        background-color: #4670fa;
+        color: white;
+        border: 2px solid black;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 0 auto; /* Center the button */
+      }
+
+      h2 {
+        font-family: "Trebuchet MS", sans-serif;
+        color: #333;
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      .heading {
+        font-size: 50px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        padding-top: 10px;
+      }
+      h2 {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 25px;
+        color: #333;
+      }
+      span{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login">
+      <div class="heading">Diabetes Prediction</div>
+      <div class="form">
+        <form action="{{ url_for('predict_datapoint')}}" method="POST">
+          <label for="Pregnancies">Pregnancies</label>
+          <input
+            type="text"
+            name="Pregnancies"
+            id="Pregnancies"
+            required="required"
+            
+          />
+
+          <label for="Glucose">Glucose</label>
+          <input type="text" name="Glucose" id="Glucose" required="required" />
+
+          <label for="BloodPressure">Blood Pressure</label>
+          <input
+            type="text"
+            name="BloodPressure"
+            id="BloodPressure"
+            required="required"
+          />
+
+          <label for="SkinThickness">Skin Thickness</label>
+          <input
+            type="text"
+            name="SkinThickness"
+            id="SkinThickness"
+            required="required"
+          />
+
+          <label for="Insulin">Insulin </label>
+          <input
+            type="text"
+            name="Insulin"
+            id="Insulin"
+            required="required"
+          />
+
+          <label for="BMI">BMI</label>
+          <input type="text" name="BMI" id="BMI" required="required" />
+
+          <label for="DiabetesPedigreeFunction">ISI</label>
+          <input
+            type="text"
+            name="DiabetesPedigreeFunction"
+            id="DiabetesPedigreeFunction"
+            required="required"
+          />
+
+          <label for="Age">Age</label>
+          <input type="text" name="Age" id="Age" required="required" /><br>
+
+          <button type="submit" class="btn btn-primary btn-block btn-large">
+            Predict
+          </button>
+        </form>
+        <h2>The Patient is <span>{{result }}</span></h2>
+      </div>
+    </div>
+  </body>
+</html>
