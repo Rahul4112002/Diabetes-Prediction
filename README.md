@@ -43,12 +43,19 @@ python app.py
     The project directory is organized as follows:
 
 ├── app.py               # Flask web application code
+
 ├── static/              # Static assets (CSS, images, etc.)
+
 ├── templates/           # HTML templates
+
 ├── data/                # Dataset used for model training
+
 ├── models/              # Trained machine learning models
+
 ├── notebooks/           # Jupyter notebooks for data analysis and model development
+
 ├── requirements.txt     # Project dependencies
+
 ├── README.md            # Project documentation
 
 # Model Training
